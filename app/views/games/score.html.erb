@@ -1,0 +1,13 @@
+<h1>Games#score</h1>
+<p>Find me in app/views/games/score.html.erb</p>
+
+<%= if @valid && @overall
+  "Congratulations! #{@attempt.upcase} is a valid English word!"
+  elsif @valid
+    "Sorry, but #{@attempt.upcase} can't be built out of #{@new_letters}."
+  else
+    "Sorry but #{@attempt.upcase} does not seem to be a valid English word..."
+    end
+    %>
+
+<%= link_to 'Play again', '/new' %>
